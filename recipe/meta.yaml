@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "MicroMet" %}
-{% set version = "0.1.31" %}
+{% set version = "0.1.32" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/inkenbrandt/MicroMet/archive/v{{ version }}.tar.gz
-  sha256: b724ab1229db9e88b96d9d2b586ea39948c6170c87c55a64e18331f72b932d17
+  sha256: 82462e1e68ac77f0b98162441713d8c211683ffa040afafdcf40fad20a55f3d0
 
 
 build:
