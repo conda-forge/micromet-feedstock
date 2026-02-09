@@ -38,7 +38,7 @@ requirements:
     - statsmodels
     - scikit-learn
     - windrose
-    - tzdata
+    - python-tzdata
 
 test:
   imports:
