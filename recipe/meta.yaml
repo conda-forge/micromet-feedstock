@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "MicroMet" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +8,9 @@ package:
 
 source:
   url: https://github.com/inkenbrandt/MicroMet/archive/v{{ version }}.tar.gz
-  sha256: 8bdbdeeea5ff03281bfeb28d615a0d4aef7d8c946859a038eef1bc3dbbf0b6d2
-
+  sha256: f5b47653d3e74c10a262e40bebd244b6c910e7115ab30a8b04314cec87966779
+  patches:
+    - fix-packages.patch
 
 build:
   noarch: python
@@ -19,9 +20,9 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=45
+    - setuptools >=64
     - wheel
-    - setuptools-scm >=6.2
+    - setuptools-scm >=8
     - pip
   run:
     - python >={{ python_min }}
@@ -33,6 +34,11 @@ requirements:
     - sqlalchemy >=1.4
     - requests >=2.25
     - pyyaml >=5.4
+    - pytz >=2021.1
+    - statsmodels
+    - scikit-learn
+    - windrose
+    - tzdata
 
 test:
   imports:
@@ -46,7 +52,7 @@ test:
 
 about:
   home: https://github.com/inkenbrandt/MicroMet
-  summary: A python package for processing and analyzing micrometeorological data.
+  summary: A comprehensive Python package for micrometeorological data analysis
   license: GPL-3.0-only
   license_file: LICENSE
 

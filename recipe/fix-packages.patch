@@ -1,0 +1,9 @@
+--- pyproject.toml
++++ pyproject.toml
+@@ -45,5 +45,5 @@
+ 
+ [tool.setuptools]
+ package-dir = {"" = "src"}
+-packages = ['micromet']
++packages = {find = {where = ["src"]}}
+ include-package-data = true
