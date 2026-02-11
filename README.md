@@ -7,7 +7,7 @@ Home: https://github.com/inkenbrandt/MicroMet
 
 Package license: GPL-3.0-only
 
-Summary: A python package for processing and analyzing micrometeorological data.
+Summary: A comprehensive Python package for micrometeorological data analysis
 
 Current build status
 ====================
